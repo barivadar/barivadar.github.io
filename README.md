@@ -1,6 +1,6 @@
 # Bari Vadaria's Personal Website
 
-Welcome to my personal website! This site acts like a central hub where I share my projects, experiences, and professional journey. Whether you're looking to learn more about my work, explore my updates, or download my resume, you'll find everything here. It's periodically being updated, so most content below will be added soon. 
+Welcome to my personal website! This site acts like a central hub where I share my projects, experiences, and professional journey (as I do and add more). Whether you're looking to learn more about my work, explore my posts, or download my resume, you'll find everything here. It's periodically being updated, so most content below will be added soon. 
 
 Now why did I make it so simple? 
 
@@ -12,12 +12,12 @@ This website was built to showcase (Soon to be updated with most of this stuff):
 - **My Portfolio**: A collection of projects I've worked on, including AI developments, software engineering, and more.
 - **Side Projects**: Ongoing and past projects in different areas of tech.
 - **Professional Information**: Includes links to my resume, social media profiles, and ways to get in touch.
-- **Updates**: Insights, experiences, and technical write-ups on topics I’m passionate about.
+- **Blog Posts**: Insights, experiences, and technical write-ups on topics I’m passionate about.
 
 ### Features
 - **Personalized Design**: Custom-built and designed using HTML, CSS, and JavaScript.
 - **Responsive Layout**: Optimized for both desktop and mobile experiences.
-- **Dynamic Content**: Some sections, like updates, are updated dynamically using JavaScript.
+- **Dynamic Content**: Some sections, like blog posts, are updated dynamically using JavaScript.
 
 ## Technologies Used
 - **HTML5**: For structuring the content.
