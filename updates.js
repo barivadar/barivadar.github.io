@@ -1,26 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let title = document.querySelector("title").innerText;
-    let dateContent = document.querySelector("meta[name='date']").getAttribute("content");
-    let dateParts = dateContent.split("-");
-    let formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
+    const USER = "barivadar";  // My GitHub username
+    const REPO = "barivadar.github.io";  // My repository name
+    const DIR = "updates";  // Folder containing my updates
+    const API_ENDPOINT = `https://api.github.com/repos/${USER}/${REPO}/contents/${DIR}`;
 
-    let headDiv = document.createElement("div");
-    headDiv.className = "head";
+    const postsList = document.querySelector("#posts-list");
 
-    let backButton = document.createElement("a");
-    backButton.href = "/";
-    backButton.innerHTML = "← Back to home";
-    headDiv.appendChild(backButton);
+    fetch(API_ENDPOINT)
+        .then((response) => response.json())
+        .then((directories) => {
+            directories = directories.map(async (directory) => {
+                let directoryName = directory.name;
+                let file = `/updates/${directoryName}/index.html`;
 
-    let updateTitle = document.createElement("h1");
-    updateTitle.innerText = title;
-    headDiv.appendChild(updateTitle);
+                let data = await fetch(file);
+                let html = await data.text();
 
-    let updateDate = document.createElement("p");
-    updateDate.className = "date";
-    updateDate.innerText = formattedDate;
-    headDiv.appendChild( updateDate);
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(html, "text/html");
+                let title = doc.querySelector("title").innerText;
+                let date = doc.querySelector("meta[name='date']").getAttribute("content");
 
-    let  updateBody = document.querySelector(". update-body");
-    updateBody.insertBefore(headDiv,  updateBody.firstChild);
+                return {
+                    title: title,
+                    date: date,
+                    name: directoryName,
+                };
+            });
+
+            return Promise.all(directories);
+        })
+        .then((directories) => {
+            directories.sort((a, b) => new Date(b.date) - new Date(a.date));  // Sort by date
+
+            directories.forEach((post) => {
+                const listItem = document.createElement("li");
+                const postLink = document.createElement("a");
+                const postDate = document.createElement("span");
+
+                postLink.href = `/${DIR}/${post.name}/`;
+                postLink.innerText = post.title;
+
+                postDate.classList.add("date");
+                postDate.innerText = ` (${new Date(post.date).toLocaleDateString()})`;
+
+                listItem.appendChild(postLink);
+                listItem.appendChild(postDate);
+                postsList.appendChild(listItem);
+            });
+        })
+        .catch((error) => console.error("Error fetching updates:", error));
 });
