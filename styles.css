@@ -1,0 +1,78 @@
+/* Custom font face for Menlo Regular */
+@font-face {
+    font-family: "Menlo Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Menlo Regular"), url("./Menlo-Regular.woff") format("woff");
+}
+
+/* Styling for Inter font */
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+/* Global styles for all elements */
+* {
+    font-family: "Menlo Regular", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* h1 Heading styles */
+h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+/* Paragraph styles */
+p {
+    margin-top: 20px;
+}
+
+/* Additional heading class */
+.head {
+    margin-top: 20px;
+}
+
+/* Main content container */
+.home-body, .post-body {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Image responsiveness */
+.post-body img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Date text styling */
+.date {
+    color: #999;
+    margin: 0;
+}
+
+/* List item spacing */
+ul li {
+    padding-top: 10px;
+}
+
+/* Padding for side projects section */
+h2 {
+    padding: 0 2rem; /* Adds 2rem padding to the left and right */
+}
+
+ul {
+    padding: 0 2rem; /* Adds 2rem padding to the left and right */
+    list-style-type: none;
+}
