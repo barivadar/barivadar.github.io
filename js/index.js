@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             directories = directories.map(async (directory) => {
                 let directoryName = directory.name;
-                let file = `/posts/${directoryName}/index.html`;
+                let file = `../posts/${directoryName}/index.html`;
 
                 let data = await fetch(file);
                 let html = await data.text();
