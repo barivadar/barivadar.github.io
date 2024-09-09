@@ -1,23 +1,18 @@
-/* Custom font face for Menlo Regular with multiple formats for compatibility */
+/* Custom font face for Menlo Regular */
 @font-face {
     font-family: "Menlo Regular";
     font-style: normal;
     font-weight: normal;
-    src: local("Menlo Regular"),
-         url("./fonts/Menlo-Regular.woff2") format("woff2"),
-         url("./fonts/Menlo-Regular.woff") format("woff"),
-         url("./fonts/Menlo-Regular.ttf") format("truetype");
-    font-display: swap; /* Ensures fallback font is shown while the custom font is loading */
+    src: local("Menlo Regular"), url(".fonts/Menlo-Regular.woff") format("woff");
 }
 
-/* Custom font face for Inter Regular */
-@font-face {
-    font-family: "Inter";
-    font-style: normal;
+/* Styling for Inter font */
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
-    src: local("Inter"),
-         url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
-    font-display: swap; /* Ensures Inter font swaps when loaded */
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
 }
 
 /* Global styles for all elements */
@@ -81,7 +76,6 @@ ul {
     padding: 0 2rem; /* Adds 2rem padding to the left and right */
     list-style-type: none;
 }
-
 h3 {
     padding: 0 2rem; /* Adds 2rem padding to the left and right */
 }
