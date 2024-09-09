@@ -1,6 +1,6 @@
 # Bari Vadaria's Personal Website
 
-Welcome to my personal website! This site acts like a central hub where I share my projects, experiences, and professional journey (as I do and add more). Whether you're looking to learn more about my work, explore my posts, or download my resume, you'll find everything here. It's periodically being updated, so most content below will be added soon. 
+Welcome to my personal website! This site is supposed to be a central hub where I share my projects, experiences, and professional journey (as I do and add more). Whether you're looking to learn more about my work, explore my posts, or download my resume, you'll find everything here. It's periodically being updated, so most content below will be added soon. 
 
 Now why did I make it so simple? 
 
