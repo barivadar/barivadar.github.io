@@ -76,3 +76,6 @@ ul {
     padding: 0 2rem; /* Adds 2rem padding to the left and right */
     list-style-type: none;
 }
+h3 {
+    padding: 0 2rem; /* Adds 2rem padding to the left and right */
+}
