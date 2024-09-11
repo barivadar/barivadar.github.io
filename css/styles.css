@@ -79,3 +79,8 @@ ul {
 h3 {
     padding: 0 2rem; /* Adds 2rem padding to the left and right */
 }
+
+img.loading-gif{
+    width: auto;
+    height: 22px;
+  }
